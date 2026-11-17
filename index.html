@@ -6,79 +6,8 @@
 <title>ملف الإنجاز المهني | بدور الشبرمي</title>
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--teal:#0f5e68;--teal-dark:#0a4650;--green:#2f7d5c;--green-soft:#e8f3ee;--sand:#f6f8f7;--ink:#173034;--muted:#5f7478;--line:#dce7e6;--card:#ffffff;--gold:#b98a2f;--red:#b3473a;--amber:#a9741c}
-*{box-sizing:border-box}
-body{margin:0;font-family:'Tajawal',system-ui,sans-serif;background:var(--sand);color:var(--ink);line-height:1.75}
-a{color:inherit;text-decoration:none}
-.container{max-width:1180px;margin:auto;padding:0 20px}
-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.nav{display:flex;align-items:center;gap:18px;justify-content:space-between;padding:14px 0}
-.brand{display:flex;align-items:center;gap:12px}
-.logo{width:46px;height:46px;border-radius:14px;background:linear-gradient(135deg,var(--teal),var(--green));color:#fff;display:grid;place-items:center;font-weight:800;font-size:19px}
-.brand strong{display:block;font-size:17px}
-.brand span{font-size:12px;color:var(--muted)}
-.menu{display:flex;gap:6px;flex-wrap:wrap}
-.menu a{padding:8px 13px;border-radius:999px;font-size:14px;font-weight:600;color:var(--teal-dark)}
-.menu a:hover,.menu a.active{background:var(--green-soft)}
-.btn{display:inline-flex;align-items:center;gap:8px;border:0;cursor:pointer;font-family:inherit;font-weight:700;border-radius:12px;padding:11px 18px;font-size:14px;transition:.2s}
-.btn-primary{background:var(--teal);color:#fff}
-.btn-primary:hover{background:var(--teal-dark)}
-.btn-ghost{background:#fff;color:var(--teal-dark);border:1px solid var(--line)}
-.btn-danger{background:#f7e8e6;color:var(--red)}
-.btn-sm{padding:7px 11px;font-size:12px;border-radius:9px}
-.hero{background:linear-gradient(135deg,#08414a 0%,#0f5e68 45%,#2f7d5c 100%);color:#fff;padding:58px 0 70px;position:relative;overflow:hidden}
-.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 15%,rgba(255,255,255,.14),transparent 38%),radial-gradient(circle at 10% 90%,rgba(255,255,255,.09),transparent 35%)}
-.hero-inner{position:relative;display:grid;grid-template-columns:1.25fr .75fr;gap:38px;align-items:center}
-.badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);padding:7px 14px;border-radius:999px;font-size:13px;font-weight:600}
-.hero h1{font-size:42px;line-height:1.25;margin:18px 0 10px}
-.hero p{color:rgba(255,255,255,.88);font-size:17px;max-width:640px}
-.hero-card{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);border-radius:22px;padding:22px;backdrop-filter:blur(8px)}
-.hero-card h3{margin:0 0 14px;font-size:16px}
-.hero-card div{display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px dashed rgba(255,255,255,.2);font-size:14px}
-.hero-card div:last-child{border:0}
-.hero-card b{font-weight:700}
-section{padding:58px 0}
-.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin-bottom:26px}
-.sec-head h2{margin:0;font-size:29px}
-.sec-head p{margin:6px 0 0;color:var(--muted)}
-.kicker{color:var(--green);font-weight:800;font-size:13px;letter-spacing:.4px}
-.grid{display:grid;gap:18px}
-.g3{grid-template-columns:repeat(3,1fr)}
-.g2{grid-template-columns:repeat(2,1fr)}
-.g4{grid-template-columns:repeat(4,1fr)}
-.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:0 8px 24px rgba(15,94,104,.05)}
-.card h3{margin:0 0 10px;font-size:18px}
-.card p{margin:0;color:var(--muted);font-size:14.5px}
-.icon{width:44px;height:44px;border-radius:13px;display:grid;place-items:center;background:var(--green-soft);color:var(--green);font-size:20px;margin-bottom:14px}
-.stat{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px;text-align:center}
-.stat b{display:block;font-size:30px;color:var(--teal);line-height:1.2}
-.stat span{font-size:13px;color:var(--muted)}
-.quote{border-right:5px solid var(--gold);background:#fff;border-radius:18px;padding:24px;box-shadow:0 8px 24px rgba(15,94,104,.05)}
-.quote p{font-size:17px;margin:0 0 14px;color:#223}
-.quote b{color:var(--teal-dark);font-size:14px}
-.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}
-label{display:block;font-size:13px;font-weight:700;margin-bottom:6px;color:var(--teal-dark)}
-input,select,textarea{width:100%;padding:11px 13px;border:1px solid var(--line);border-radius:11px;font-family:inherit;font-size:14px;background:#fbfdfd;color:var(--ink)}
-textarea{min-height:92px;resize:vertical}
-.full{grid-column:1/-1}
-.chips{display:flex;flex-wrap:wrap;gap:8px}
-.chip{padding:7px 12px;border-radius:999px;background:var(--green-soft);color:var(--teal-dark);font-size:12px;font-weight:700;border:1px solid #cfe3dc}
-.chip.gray{background:#eef2f2;color:#52646a;border-color:#dfe7e6}
-.chip.amber{background:#fdf3e0;color:var(--amber);border-color:#ecdcb4}
-.chip.red{background:#f9e9e7;color:var(--red);border-color:#e5c6c1}
-table{width:100%;border-collapse:collapse;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 6px 18px rgba(15,94,104,.05)}
-th,td{padding:13px 14px;text-align:right;border-bottom:1px solid var(--line);font-size:13.5px;vertical-align:top}
-th{background:#eef6f4;color:var(--teal-dark);font-size:13px}
-tr:last-child td{border:0}
-.filters{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:16px}
-.progress{height:8px;background:#e8efee;border-radius:99px;overflow:hidden}
-.progress i{display:block;height:100%;background:linear-gradient(90deg,var(--teal),var(--green));border-radius:99px}
-.empty{padding:34px;text-align:center;color:var(--muted);background:#fff;border:1px dashed var(--line);border-radius:18px}
-footer{background:#08414a;color:rgba(255,255,255,.78);padding:30px 0;margin-top:40px;font-size:13.5px}
-footer .container{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-.hidden{display:none!important}
-@media(max-width:920px){.hero-inner,.g3,.g4,.form-grid,.filters{grid-template-columns:1fr}.g2{grid-template-columns:1fr}.hero h1{font-size:32px}.menu{display:none}}
-@media print{header,.btn,.filters,.no-print{display:none!important}body{background:#fff}section{padding:18px 0}.card,.stat,table{box-shadow:none}}
+:root{--teal:#0f5e68;--teal-dark:#0a4650;--green:#2f7d5c;--green-soft:#e8f3ee;--sand:#f6f8f7;--ink:#173034;--muted:#5f7478;--line:#dce7e6;--card:#fff;--gold:#b98a2f;--red:#b3473a;--amber:#a9741c}
+*{box-sizing:border-box}body{margin:0;font-family:'Tajawal',system-ui,sans-serif;background:var(--sand);color:var(--ink);line-height:1.75}a{color:inherit;text-decoration:none}.container{max-width:1180px;margin:auto;padding:0 20px}header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}.nav{display:flex;align-items:center;gap:18px;justify-content:space-between;padding:14px 0}.brand{display:flex;align-items:center;gap:12px}.logo{width:46px;height:46px;border-radius:14px;background:linear-gradient(135deg,var(--teal),var(--green));color:#fff;display:grid;place-items:center;font-weight:800;font-size:19px}.brand strong{display:block;font-size:17px}.brand span{font-size:12px;color:var(--muted)}.menu{display:flex;gap:6px;flex-wrap:wrap}.menu a{padding:8px 13px;border-radius:999px;font-size:14px;font-weight:600;color:var(--teal-dark)}.menu a:hover,.menu a.active{background:var(--green-soft)}.btn{display:inline-flex;align-items:center;gap:8px;border:0;cursor:pointer;font-family:inherit;font-weight:700;border-radius:12px;padding:11px 18px;font-size:14px;transition:.2s}.btn-primary{background:var(--teal);color:#fff}.btn-primary:hover{background:var(--teal-dark)}.btn-ghost{background:#fff;color:var(--teal-dark);border:1px solid var(--line)}.btn-danger{background:#f7e8e6;color:var(--red)}.btn-sm{padding:7px 11px;font-size:12px;border-radius:9px}.hero{background:linear-gradient(135deg,#08414a 0%,#0f5e68 45%,#2f7d5c 100%);color:#fff;padding:58px 0 70px;position:relative;overflow:hidden}.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 15%,rgba(255,255,255,.14),transparent 38%),radial-gradient(circle at 10% 90%,rgba(255,255,255,.09),transparent 35%)}.hero-inner{position:relative;display:grid;grid-template-columns:1.25fr .75fr;gap:38px;align-items:center}.badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);padding:7px 14px;border-radius:999px;font-size:13px;font-weight:600}.hero h1{font-size:42px;line-height:1.25;margin:18px 0 10px}.hero p{color:rgba(255,255,255,.88);font-size:17px;max-width:640px}.hero-card{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);border-radius:22px;padding:22px;backdrop-filter:blur(8px)}.hero-card h3{margin:0 0 14px;font-size:16px}.hero-card div{display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px dashed rgba(255,255,255,.2);font-size:14px}.hero-card div:last-child{border:0}.hero-card b{font-weight:700}section{padding:58px 0}.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin-bottom:26px}.sec-head h2{margin:0;font-size:29px}.sec-head p{margin:6px 0 0;color:var(--muted)}.kicker{color:var(--green);font-weight:800;font-size:13px;letter-spacing:.4px}.grid{display:grid;gap:18px}.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:repeat(2,1fr)}.g4{grid-template-columns:repeat(4,1fr)}.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:0 8px 24px rgba(15,94,104,.05)}.card h3{margin:0 0 10px;font-size:18px}.card p{margin:0;color:var(--muted);font-size:14.5px}.icon{width:44px;height:44px;border-radius:13px;display:grid;place-items:center;background:var(--green-soft);color:var(--green);font-size:20px;margin-bottom:14px}.stat{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px;text-align:center}.stat b{display:block;font-size:30px;color:var(--teal);line-height:1.2}.stat span{font-size:13px;color:var(--muted)}.quote{border-right:5px solid var(--gold);background:#fff;border-radius:18px;padding:24px;box-shadow:0 8px 24px rgba(15,94,104,.05);display:flex;gap:16px;align-items:flex-start}.quote img{width:84px;height:84px;border-radius:50%;object-fit:cover;border:3px solid var(--gold)}.quote p{font-size:17px;margin:0 0 14px;color:#223}.quote b{color:var(--teal-dark);font-size:14px}.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}label{display:block;font-size:13px;font-weight:700;margin-bottom:6px;color:var(--teal-dark)}input,select,textarea{width:100%;padding:11px 13px;border:1px solid var(--line);border-radius:11px;font-family:inherit;font-size:14px;background:#fbfdfd;color:var(--ink)}textarea{min-height:92px;resize:vertical}.full{grid-column:1/-1}.chips{display:flex;flex-wrap:wrap;gap:8px}.chip{padding:7px 12px;border-radius:999px;background:var(--green-soft);color:var(--teal-dark);font-size:12px;font-weight:700;border:1px solid #cfe3dc}.chip.gray{background:#eef2f2;color:#52646a;border-color:#dfe7e6}.chip.amber{background:#fdf3e0;color:var(--amber);border-color:#ecdcb4}.chip.red{background:#f9e9e7;color:var(--red);border-color:#e5c6c1}table{width:100%;border-collapse:collapse;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 6px 18px rgba(15,94,104,.05)}th,td{padding:13px 14px;text-align:right;border-bottom:1px solid var(--line);font-size:13.5px;vertical-align:top}th{background:#eef6f4;color:var(--teal-dark);font-size:13px}tr:last-child td{border:0}.filters{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:16px}.progress{height:8px;background:#e8efee;border-radius:99px;overflow:hidden}.progress i{display:block;height:100%;background:linear-gradient(90deg,var(--teal),var(--green));border-radius:99px}.empty{padding:34px;text-align:center;color:var(--muted);background:#fff;border:1px dashed var(--line);border-radius:18px}footer{background:#08414a;color:rgba(255,255,255,.78);padding:30px 0;margin-top:40px;font-size:13.5px}footer .container{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.hidden{display:none!important}.admin-note{font-size:12px;color:var(--muted);margin-top:8px}@media(max-width:920px){.hero-inner,.g3,.g4,.form-grid,.filters{grid-template-columns:1fr}.g2{grid-template-columns:1fr}.hero h1{font-size:32px}.menu{display:none}}@media print{header,.btn,.filters,.no-print{display:none!important}body{background:#fff}section{padding:18px 0}.card,.stat,table{box-shadow:none}}
 </style>
 </head>
 <body>
@@ -119,16 +48,16 @@ footer .container{display:flex;justify-content:space-between;gap:20px;flex-wrap:
 <section class="container">
 <div class="grid g3">
 <div class="card"><div class="icon">🎓</div><h3>المؤهلات العلمية</h3><p>بكالوريوس الرياضيات، وماجستير TESOL، وماجستير التربية في STEM والتعليم الشامل من جامعة كوينزلاند للتقنية بأستراليا.</p></div>
-<div class="card"><div class="icon">🎯</div><h3>الرؤية المهنية</h3><p contenteditable="true">التميز في تعليم الرياضيات من خلال بيئة تعليمية محفزة وشاملة، تنمّي التفكير الرياضي والإبداع والاستقصاء، وتمكّن الطالبات من توظيف معارفهن في حل المشكلات الواقعية وصناعة المستقبل.</p></div>
-<div class="card"><div class="icon">🚀</div><h3>الرسالة المهنية</h3><p contenteditable="true">تقديم تعليم رياضي نوعي يرتكز على التعلم النشط والاستقصاء وتطبيقات STEM والتقنيات الرقمية، ويراعي الفروق الفردية واحتياجات الطالبات الموهوبات، مع توظيف التقويم المستمر وتحليل النتائج لتحسين نواتج التعلم، وتعزيز الابتكار والتعاون والتطوير المهني المستدام.</p></div>
+<div class="card"><div class="icon">🎯</div><h3>الرؤية المهنية</h3><p id="visionText">التميز في تعليم الرياضيات من خلال بيئة تعليمية محفزة وشاملة، تنمّي التفكير الرياضي والإبداع والاستقصاء، وتمكّن الطالبات من توظيف معارفهن في حل المشكلات الواقعية وصناعة المستقبل.</p><button class="btn btn-ghost btn-sm admin-only" onclick="editText('visionText','الرؤية المهنية')">تعديل</button></div>
+<div class="card"><div class="icon">🚀</div><h3>الرسالة المهنية</h3><p id="missionText">تقديم تعليم رياضي نوعي يرتكز على التعلم النشط والاستقصاء وتطبيقات STEM والتقنيات الرقمية، ويراعي الفروق الفردية واحتياجات الطالبات الموهوبات، مع توظيف التقويم المستمر وتحليل النتائج لتحسين نواتج التعلم، وتعزيز الابتكار والتعاون والتطوير المهني المستدام.</p><button class="btn btn-ghost btn-sm admin-only" onclick="editText('missionText','الرسالة المهنية')">تعديل</button></div>
 </div>
 </section>
 
 <section class="container" style="padding-top:0">
 <div class="sec-head"><div><div class="kicker">التعليم في رؤية قيادتنا</div><h2>اقتباسات ملهمة</h2></div></div>
 <div class="grid g2">
-<div class="quote"><p>«إن التعليم في السعودية هو الركيزة الأساسية التي نحقق بها تطلعات شعبنا نحو التقدم والرقي في العلوم والمعارف».</p><b>خادم الحرمين الشريفين الملك سلمان بن عبدالعزيز آل سعود</b></div>
-<div class="quote"><p>«سيكون هدفنا أن يحصل كل طفل سعودي أينما كان على فرص التعليم الجيد وفق خيارات متنوعة، وسيكون تركيزنا أكبر على مراحل التعليم المبكر».</p><b>صاحب السمو الملكي الأمير محمد بن سلمان بن عبدالعزيز آل سعود، ولي العهد</b></div>
+<div class="quote"><img id="imgKing" src="" alt="صورة خادم الحرمين الشريفين"><div><p>«إن التعليم في السعودية هو الركيزة الأساسية التي نحقق بها تطلعات شعبنا نحو التقدم والرقي في العلوم والمعارف».</p><b>خادم الحرمين الشريفين الملك سلمان بن عبدالعزيز آل سعود</b><div class="admin-note admin-only"><input type="file" accept="image/*" onchange="uploadLeaderImage('imgKing',this)"></div></div></div>
+<div class="quote"><img id="imgCrown" src="" alt="صورة صاحب السمو الملكي ولي العهد"><div><p>«سيكون هدفنا أن يحصل كل طفل سعودي أينما كان على فرص التعليم الجيد وفق خيارات متنوعة، وسيكون تركيزنا أكبر على مراحل التعليم المبكر».</p><b>صاحب السمو الملكي الأمير محمد بن سلمان بن عبدالعزيز آل سعود، ولي العهد</b><div class="admin-note admin-only"><input type="file" accept="image/*" onchange="uploadLeaderImage('imgCrown',this)"></div></div></div>
 </div>
 </section>
 
@@ -161,7 +90,8 @@ footer .container{display:flex;justify-content:space-between;gap:20px;flex-wrap:
 <div class="full"><label>الهدف من العمل</label><textarea id="f-goal" placeholder="ما الهدف التعليمي أو المهني من الشاهد؟"></textarea></div>
 <div class="full"><label>عناصر الأداء الوظيفي المرتبطة *</label><div id="elementChecks" class="chips"></div></div>
 <div><label>ارتباط بالخطة التشغيلية أو مبادرة مدرسية</label><input id="f-plan" placeholder="اسم الخطة أو المبادرة، إن وجد"></div>
-<div><label>رابط أو صورة أو ملف PDF</label><input id="f-link" placeholder="ألصقي رابط Google Drive أو OneDrive أو منصة إلكترونية"></div>
+<div><label>رابط خارجي (اختياري)</label><input id="f-link" placeholder="ألصقي رابط Google Drive أو OneDrive"></div>
+<div><label>رفع صورة أو ملف PDF</label><input id="f-file" type="file" accept="image/*,application/pdf"></div>
 <div class="full"><label>النتائج ومؤشرات الأثر</label><textarea id="f-impact" placeholder="اكتبي النتائج الفعلية فقط عند توفرها؛ لا تُنشأ نتائج افتراضية"></textarea></div>
 <div><label>حالة التوثيق</label><select id="f-status"><option>مسودة</option><option>يحتاج استكمالًا</option><option>مكتمل</option></select></div>
 <div><label>مجال التميز المهني</label><select id="f-domain"><option value="">غير محدد</option><option>المبادرات والمشروعات التعليمية</option><option>القيادة والمساهمات المدرسية</option><option>الابتكار والتقنيات التعليمية</option><option>التطوير المهني</option><option>شهادات الشكر والتكريم</option></select></div>
@@ -207,6 +137,10 @@ footer .container{display:flex;justify-content:space-between;gap:20px;flex-wrap:
 <footer><div class="container"><div>ملف الإنجاز المهني الإلكتروني — بدور الشبرمي | معلمة رياضيات، ثانوية الموهوبات التقنية بمنطقة حائل</div><div>يُحفظ المحتوى محليًا في هذا المتصفح، ويمكن تطويره لاحقًا إلى قاعدة بيانات سحابية.</div></div></footer>
 
 <script>
+const ADMIN_PASS='Budur2026';
+let isAdmin=false;
+function requireAdmin(){if(isAdmin)return true;const p=prompt('أدخلي كلمة مرور المسؤولة للتعديل:');if(p===ADMIN_PASS){isAdmin=true;document.querySelectorAll('.admin-only').forEach(e=>e.style.display='');return true}alert('كلمة المرور غير صحيحة.');return false}
+document.querySelectorAll('.admin-only').forEach(e=>e.style.display='none');
 const elements=[
 {n:1,t:"أداء الواجبات الوظيفية",w:"10%",d:"الالتزام بأداء المهام والتكليفات الرسمية والمساهمات التنظيمية ومتابعة الواجبات المهنية.",p:["التكليفات الرسمية","سجلات أداء المهام","المساهمات التنظيمية","المتابعة والالتزام بالواجبات المهنية"]},
 {n:2,t:"التفاعل مع المجتمع المهني",w:"10%",d:"المشاركة الفاعلة في مجتمعات التعلم المهنية وتبادل الخبرات والممارسات التطويرية.",p:["مجتمعات التعلم المهنية","تبادل الخبرات","الورش","اللقاءات المهنية","المشاركات التطويرية"]},
@@ -220,7 +154,7 @@ const elements=[
 {n:10,t:"تحليل نتائج المتعلمين وتشخيص مستوياتهم",w:"10%",d:"تحليل نتائج المتعلمات وتشخيص مستوياتهن لتحديد الاحتياجات والتدخلات المناسبة.",p:["الاختبارات التشخيصية","تحليل الدرجات","تحديد المهارات غير المتقنة","تصنيف مستويات الطالبات","التقارير التحليلية"]},
 {n:11,t:"تنوع أساليب التقويم",w:"10%",d:"استخدام أساليب تقويم متنوعة قبليًا وتكوينيًا وختاميًا لدعم التعلم وقياس النواتج.",p:["التقويم القبلي والتكويني والختامي","الاختبارات الرقمية","ملفات الإنجاز","المشروعات","أدوات التقييم","سلالم التقدير"]}
 ];
-const KEY='badour_portfolio_v1';
+const KEY='badour_portfolio_v2';
 let data=JSON.parse(localStorage.getItem(KEY)||'{"evidences":[]}');
 function save(){localStorage.setItem(KEY,JSON.stringify(data));render()}
 function elById(n){return elements.find(e=>e.n===Number(n))}
@@ -237,7 +171,7 @@ function renderEvidence(){
 const q=document.getElementById('q').value.trim(),fe=document.getElementById('filterElement').value,ft=document.getElementById('filterTerm').value,fs=document.getElementById('filterStatus').value;
 let list=data.evidences.filter(x=>(!q||x.title.includes(q)||x.desc.includes(q))&&(!fe||x.elements.includes(Number(fe)))&&(!ft||x.term===ft)&&(!fs||x.status===fs));
 list.sort((a,b)=>b.date.localeCompare(a.date));
-document.getElementById('evidenceList').innerHTML=list.length?`<table><thead><tr><th>العنوان</th><th>التاريخ والفصل</th><th>النوع</th><th>عناصر الأداء</th><th>الحالة</th><th>الإجراءات</th></tr></thead><tbody>${list.map(x=>`<tr><td><b>${x.title}</b><div style="color:var(--muted);font-size:12.5px">${x.desc}</div>${x.link?`<a href="${x.link}" target="_blank" style="color:var(--teal);font-size:12.5px">فتح الشاهد</a>`:''}</td><td>${x.date}<br>${x.term}</td><td>${x.type}</td><td>${x.elements.map(n=>`<span class="chip">${n}</span>`).join(' ')}</td><td>${statusChip(x.status)}</td><td><button class="btn btn-ghost btn-sm" onclick="editEvidence('${x.id}')">تعديل</button> <button class="btn btn-danger btn-sm" onclick="deleteEvidence('${x.id}')">حذف</button></td></tr>`).join('')}</tbody></table>`:'<div class="empty">لا توجد شواهد مطابقة للبحث أو التصفية الحالية.</div>';
+document.getElementById('evidenceList').innerHTML=list.length?`<table><thead><tr><th>العنوان</th><th>التاريخ والفصل</th><th>النوع</th><th>عناصر الأداء</th><th>المرفق</th><th>الحالة</th><th>الإجراءات</th></tr></thead><tbody>${list.map(x=>`<tr><td><b>${x.title}</b><div style="color:var(--muted);font-size:12.5px">${x.desc}</div>${x.link?`<a href="${x.link}" target="_blank" style="color:var(--teal);font-size:12.5px">فتح الرابط</a>`:''}</td><td>${x.date}<br>${x.term}</td><td>${x.type}</td><td>${x.elements.map(n=>`<span class="chip">${n}</span>`).join(' ')}</td><td>${x.file?`<a href="${x.file.data}" download="${x.file.name}" style="color:var(--teal);font-size:12.5px">${x.file.name}</a>`:'—'}</td><td>${statusChip(x.status)}</td><td><button class="btn btn-ghost btn-sm" onclick="editEvidence('${x.id}')">تعديل</button> <button class="btn btn-danger btn-sm" onclick="deleteEvidence('${x.id}')">حذف</button></td></tr>`).join('')}</tbody></table>`:'<div class="empty">لا توجد شواهد مطابقة للبحث أو التصفية الحالية.</div>';
 }
 function renderDashboard(){
 const es=data.evidences;document.getElementById('s-total').textContent=es.length;
@@ -251,20 +185,29 @@ function render(){renderElements();renderEvidence();renderDashboard()}
 document.getElementById('evidenceForm').addEventListener('submit',e=>{e.preventDefault();
 const selected=[...document.querySelectorAll('.elem-check:checked')].map(c=>Number(c.value));
 if(!selected.length){alert('اختاري عنصر أداء واحدًا على الأقل.');return}
-const obj={id:Date.now().toString(),title:f_title.value,date:f_date.value,term:f_term.value,type:f_type.value,desc:f_desc.value,goal:f_goal.value,elements:selected,plan:f_plan.value,link:f_link.value,impact:f_impact.value,status:f_status.value,domain:f_domain.value};
+const fileInput=document.getElementById('f-file');let file=null;
+if(fileInput.files[0]){const f=fileInput.files[0];if(f.size>2*1024*1024){alert('حجم الملف كبير؛ الحد الأقصى 2MB في هذه النسخة.');return}
+const reader=new FileReader();reader.onload=()=>{file={name:f.name,type:f.type,data:reader.result};const obj={id:Date.now().toString(),title:f_title.value,date:f_date.value,term:f_term.value,type:f_type.value,desc:f_desc.value,goal:f_goal.value,elements:selected,plan:f_plan.value,link:f_link.value,impact:f_impact.value,status:f_status.value,domain:f_domain.value,file};data.evidences.push(obj);save();e.target.reset();renderChecks();alert('تم حفظ الشاهد وربطه بالعناصر المختارة.')};reader.readAsDataURL(f);return}
+const obj={id:Date.now().toString(),title:f_title.value,date:f_date.value,term:f_term.value,type:f_type.value,desc:f_desc.value,goal:f_goal.value,elements:selected,plan:f_plan.value,link:f_link.value,impact:f_impact.value,status:f_status.value,domain:f_domain.value,file:null};
 data.evidences.push(obj);save();e.target.reset();renderChecks();alert('تم حفظ الشاهد وربطه بالعناصر المختارة.')});
 function prefill(n){location.hash='#add';setTimeout(()=>{document.querySelector(`.elem-check[value="${n}"]`).checked=true;document.getElementById('f-title').focus()},100)}
-function editEvidence(id){const x=data.evidences.find(v=>v.id===id);if(!x)return;location.hash='#add';
+function editEvidence(id){if(!requireAdmin())return;const x=data.evidences.find(v=>v.id===id);if(!x)return;location.hash='#add';
 f_title.value=x.title;f_date.value=x.date;f_term.value=x.term;f_type.value=x.type;f_desc.value=x.desc;f_goal.value=x.goal;f_plan.value=x.plan;f_link.value=x.link;f_impact.value=x.impact;f_status.value=x.status;f_domain.value=x.domain;
 document.querySelectorAll('.elem-check').forEach(c=>c.checked=x.elements.includes(Number(c.value)));
 data.evidences=data.evidences.filter(v=>v.id!==id);save();renderChecks()}
-function deleteEvidence(id){if(confirm('هل تريدين حذف هذا الشاهد نهائيًا؟')){data.evidences=data.evidences.filter(v=>v.id!==id);save()}}
+function deleteEvidence(id){if(!requireAdmin())return;if(confirm('هل تريدين حذف هذا الشاهد نهائيًا؟')){data.evidences=data.evidences.filter(v=>v.id!==id);save()}}
 ['q','filterElement','filterTerm','filterStatus'].forEach(id=>document.getElementById(id).addEventListener('input',renderEvidence));
+function editText(id,label){if(!requireAdmin())return;const el=document.getElementById(id);const nv=prompt('تعديل '+label+':',el.textContent);if(nv){el.textContent=nv;localStorage.setItem('text_'+id,nv)}}
+function uploadLeaderImage(id,input){if(!requireAdmin())return;const f=input.files[0];if(!f)return;if(f.size>2*1024*1024){alert('حجم الصورة كبير؛ الحد الأقصى 2MB.');return}
+const reader=new FileReader();reader.onload=()=>{document.getElementById(id).src=reader.result;localStorage.setItem('img_'+id,reader.result)};reader.readAsDataURL(f)}
 function report(title,rows){const out=document.getElementById('reportOutput');out.classList.remove('hidden');
-out.innerHTML=`<h3>${title}</h3><p style="color:var(--muted)">تاريخ الإنشاء: ${new Date().toLocaleDateString('ar-SA')}</p><table><thead><tr><th>الشاهد</th><th>التاريخ / الفصل</th><th>عناصر الأداء</th><th>الوصف والأثر</th><th>الرابط</th></tr></thead><tbody>${rows.length?rows.map(x=>`<tr><td><b>${x.title}</b></td><td>${x.date}<br>${x.term}</td><td>${x.elements.map(n=>elById(n).t).join('، ')}</td><td>${x.desc}<br><b>الأثر:</b> ${x.impact||'لم يُوثّق بعد'}</td><td>${x.link?`<a href="${x.link}" target="_blank">رابط</a>`:'—'}</td></tr>`).join(''):'<tr><td colspan="5">لا توجد شواهد موثقة ضمن هذا النطاق.</td></tr>'}</tbody></table><button class="btn btn-primary btn-sm no-print" style="margin-top:14px" onclick="window.print()">طباعة أو حفظ PDF</button>`}
+out.innerHTML=`<h3>${title}</h3><p style="color:var(--muted)">تاريخ الإنشاء: ${new Date().toLocaleDateString('ar-SA')}</p><table><thead><tr><th>الشاهد</th><th>التاريخ / الفصل</th><th>عناصر الأداء</th><th>الوصف والأثر</th><th>المرفق</th></tr></thead><tbody>${rows.length?rows.map(x=>`<tr><td><b>${x.title}</b></td><td>${x.date}<br>${x.term}</td><td>${x.elements.map(n=>elById(n).t).join('، ')}</td><td>${x.desc}<br><b>الأثر:</b> ${x.impact||'لم يُوثّق بعد'}</td><td>${x.file?`<a href="${x.file.data}" download="${x.file.name}">${x.file.name}</a>`:(x.link?`<a href="${x.link}" target="_blank">رابط</a>`:'—')}</td></tr>`).join(''):'<tr><td colspan="5">لا توجد شواهد موثقة ضمن هذا النطاق.</td></tr>'}</tbody></table><button class="btn btn-primary btn-sm no-print" style="margin-top:14px" onclick="window.print()">طباعة أو حفظ PDF</button>`}
 function makeElementReport(){report('تقرير عنصر: '+elById(document.getElementById('reportElement').value).t,data.evidences.filter(x=>x.elements.includes(Number(document.getElementById('reportElement').value))))}
 function makeTermReport(){report('تقرير إنجاز '+document.getElementById('reportTerm').value,data.evidences.filter(x=>x.term===document.getElementById('reportTerm').value))}
 function makeBriefReport(){report('ملف الإنجاز المهني المختصر — بدور الشبرمي',data.evidences.filter(x=>x.status==='مكتمل').slice(0,20))}
+// restore saved texts/images
+['visionText','missionText'].forEach(id=>{const v=localStorage.getItem('text_'+id);if(v)document.getElementById(id).textContent=v});
+['imgKing','imgCrown'].forEach(id=>{const v=localStorage.getItem('img_'+id);if(v)document.getElementById(id).src=v});
 renderChecks();render();
 </script>
 </body>
